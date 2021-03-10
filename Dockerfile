@@ -2,6 +2,11 @@ FROM alpine:20200122 as build
 
 ## Compile pHash
 RUN apk add -U git jpeg-dev libpng-dev tiff-dev g++ make cmake libx11-dev python3 nodejs npm
+
+RUN apk add -U bind-tools
+RUN cat /etc/resolv.conf
+RUN dig github.com
+
 WORKDIR /build
 RUN git clone https://github.com/aetilius/pHash.git && \
     git -C pHash checkout 887d07b9bdd9e2fb082c932002cefbcb1c8c20a1 && \
