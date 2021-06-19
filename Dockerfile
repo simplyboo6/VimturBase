@@ -12,7 +12,7 @@ RUN git clone https://github.com/aetilius/pHash.git && \
     make -j8 && make install && \
     cp /build/pHash/third-party/CImg/CImg.h /usr/include/
 
-RUN npm install --unsafe --global phash2@1.0.3
+RUN npm install --unsafe --global phash2@1.1.0
 
 FROM alpine:3.12.4
 
