@@ -16,7 +16,7 @@ RUN npm install --unsafe --global phash2@1.1.0
 
 FROM alpine:3.12.4
 
-RUN apk add --no-cache tini imagemagick jpeg libpng tiff libx11 ffmpeg nodejs yarn jpeg-dev libpng-dev tiff-dev
+RUN apk add --no-cache tini imagemagick jpeg libpng tiff libx11 ffmpeg nodejs yarn jpeg-dev libpng-dev tiff-dev pngquant
 
 COPY --from=build /usr/local/lib/libpHash.so.1.0.0 /usr/local/lib/libpHash.so /usr/local/lib/
 COPY --from=build /usr/local/include/pHash.h /usr/local/include/pHash.h
