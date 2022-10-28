@@ -1,7 +1,7 @@
 FROM alpine:3.15 as build
 
 ## Compile pHash
-RUN apk add -U git jpeg-dev libpng-dev tiff-dev g++ make cmake libx11-dev python3 nodejs npm py3-pip
+RUN apk add -U git jpeg-dev libpng-dev tiff-dev g++ make cmake libx11-dev python3 nodejs npm py3-pip python3-dev
 
 WORKDIR /build
 RUN git clone https://github.com/aetilius/pHash.git && \
